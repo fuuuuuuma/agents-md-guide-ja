@@ -158,6 +158,22 @@
   .nav-btn{background:var(--paper);border:1.5px solid var(--line);color:var(--brand-deep);padding:9px 26px;border-radius:10px;cursor:pointer;font-family:var(--head);font-size:14px;font-weight:700;transition:.18s;}
   .nav-btn:hover{border-color:var(--brand);background:var(--brand-soft);}
   .counter{color:var(--ink-mid);font-size:14px;min-width:70px;text-align:center;}
+  /* 図解モックアップ（画像枠の差し替え） */
+  .mock{border:1.5px solid var(--line);border-radius:14px;background:var(--paper);box-shadow:0 3px 12px rgba(0,0,0,.05);overflow:hidden;display:flex;flex-direction:column;}
+  .mock .bar{background:var(--brand);color:#fff;font-family:var(--head);font-weight:900;font-size:14px;padding:10px 16px;display:flex;align-items:center;gap:8px;}
+  .mock .code{padding:16px 20px;font-family:ui-monospace,Menlo,monospace;font-size:14px;line-height:1.9;color:var(--ink);}
+  .mock .code .h{color:var(--brand-deep);font-weight:700;} .mock .code .cm{color:var(--ink-mid);}
+  .fan{border:1.5px solid var(--line);border-radius:14px;background:var(--bg);display:flex;align-items:center;justify-content:center;gap:16px;padding:20px;}
+  .fan .core{background:var(--brand);color:#fff;font-family:var(--head);font-weight:900;border-radius:12px;padding:14px 16px;font-size:14px;text-align:center;line-height:1.35;}
+  .fan .grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;}
+  .fan .tool{background:var(--paper);border:1.5px solid var(--accent);color:var(--ink);border-radius:8px;padding:8px 12px;font-size:13px;font-weight:700;text-align:center;}
+  .fan .ar{color:var(--accent-deep);font-size:30px;font-weight:900;}
+  .tree{border:1.5px solid var(--line);border-radius:14px;background:var(--ink);color:#ECECEA;font-family:ui-monospace,Menlo,monospace;font-size:14px;line-height:1.95;padding:18px 22px;}
+  .tree .hi{color:var(--accent);font-weight:700;} .tree .cm{color:#9FB6C9;}
+  .vstack{border:1.5px solid var(--line);border-radius:14px;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:20px;}
+  .vstack .chip{background:var(--paper);border:1.5px solid var(--line);border-radius:8px;padding:7px 14px;font-size:13px;font-weight:700;color:var(--ink);}
+  .vstack .ar{color:var(--accent-deep);font-size:22px;font-weight:900;line-height:1;}
+  .vstack .ok{background:var(--brand);color:#fff;border-radius:8px;padding:8px 16px;font-family:var(--head);font-weight:900;font-size:14px;}
 </style>
 </head>
 <body>
@@ -188,14 +204,14 @@
 <!-- 02 この資料について -->
 <div class="slide">
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
-  <p class="eyebrow">はじめに</p><h2 class="stitle">この資料の読み方</h2>
+  <p class="eyebrow">この動画で分かること</p><h2 class="stitle">ゴール</h2>
   <ul class="checks">
-    <li>専門知識ゼロでも分かるように、日常語と図解で説明します</li>
-    <li>確度マーク: <span class="hl">✅公式確認済み</span> ／ 🔶一次情報あり（流動的） ／ ⚠️未確認・推測</li>
-    <li>数値（採用数・スター数など）は変動します。最終確認は公式サイト agents.md で</li>
-    <li>本資料は非公式まとめ。AGENTS.md プロジェクト・各ベンダーとは無関係です</li>
+    <li>AGENTS.md が<span class="hl">何か</span>／なぜ今あちこちで使われているのか</li>
+    <li>何を書くか・どう書くか（<span class="hl">コピペできる最小テンプレ</span>つき）</li>
+    <li>Codex・Cursor・Claude Code での<span class="hl">効かせ方の違い</span></li>
+    <li>実務者がハマる<span class="hl">落とし穴</span>と、その回避法</li>
   </ul>
-  <span class="kick">この資料について</span><span class="sno">2</span>
+  <span class="kick">この動画で分かること</span><span class="sno">2</span>
 </div>
 
 <!-- 03 目次 -->
@@ -210,7 +226,7 @@
     <li><span>5</span>中身：何を書くのか</li>
     <li><span>6</span>使い方（初心者基準）</li>
     <li><span>7</span>Claude Code でどう使うか</li>
-    <li><span>8</span>FAQ・注意点・まとめ</li>
+    <li><span>8</span>FAQ・現場の知見・まとめ</li>
   </ul>
   <span class="kick">目次</span><span class="sno">3</span>
 </div>
@@ -247,7 +263,8 @@
   <div class="cols c2" style="align-items:center;">
     <div><p style="font-size:20px;line-height:1.8;font-weight:600;">AGENTS.md は、ひとことで言うと <span class="hl">「AIエージェント向けのREADME」</span>。プロジェクト直下に置くと、対応AIが<span class="hl">作業前に自動で読んで</span>、手順やルールを把握します。✅</p>
       <p style="font-size:16px;color:var(--ink-mid);line-height:1.7;margin-top:16px;">比喩でいえば「新メンバーへの引き継ぎメモ」。動かし方・規約・地雷を1枚にまとめて渡すイメージです。</p></div>
-    <div class="imgbox" style="height:300px;"><div class="ic">📄</div>AGENTS.md（ただのMarkdown）<small>本番では公式の例／実ファイルのスクショを配置</small></div>
+    <div class="mock" style="height:300px;"><div class="bar">📄 AGENTS.md</div>
+      <div class="code"><span class="cm"># AI向けの取扱説明書</span><br><span class="h">## テスト</span><br>- 実行: npm test<br><span class="h">## コード規約</span><br>- 2スペース / camelCase<br><span class="h">## やらないこと</span><br>- /legacy は変更しない</div></div>
   </div>
   <span class="kick">定義</span><span class="sno">6</span>
 </div>
@@ -299,7 +316,11 @@
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
   <div class="head-row"><span class="secno">03</span><h2>柱① <span class="hl">設定の乱立を1枚に収束</span></h2></div>
   <div class="cols c2" style="align-items:center;">
-    <div class="imgbox" style="height:280px;"><div class="ic">🗂️</div>1ファイル → 多ツール<small>1つのAGENTS.mdを各ツールが読む図</small></div>
+    <div class="fan" style="height:280px;">
+      <div class="core">📄<br>AGENTS.md<br><span style="font-size:11px;font-weight:500;">1ファイル</span></div>
+      <div class="ar">⇉</div>
+      <div class="grid"><div class="tool">Codex</div><div class="tool">Cursor</div><div class="tool">Copilot</div><div class="tool">Gemini CLI</div></div>
+    </div>
     <div><ul class="checks"><li>ツールごとに書き直さなくていい</li><li>.cursorrules 等の集約先になる</li><li>チームで同じルールを共有できる</li></ul>
       <p style="font-size:15px;color:var(--ink-mid);margin-top:12px;">対応ツールが同じ1ファイルを読みます（対応は公式記載 ✅）。</p></div>
   </div>
@@ -313,7 +334,13 @@
   <div class="cols c2" style="align-items:center;">
     <div><ul class="checks"><li>作業の起点で毎回 AGENTS.md を読む</li><li>会話が長くても前提がブレにくい</li><li>テスト/ビルド手順を毎回伝えなくていい</li></ul>
       <p style="font-size:15px;color:var(--ink-mid);margin-top:12px;">現場では「一貫性が上がった」「チーム開発で効く」の声（🔶個人差あり）。</p></div>
-    <div class="imgbox" style="height:280px;"><div class="ic">🔁</div>ブレない出力<small>同じ前提で実行されるイメージ</small></div>
+    <div class="vstack" style="height:280px;">
+      <div style="display:flex;gap:8px;"><span class="chip">会話①</span><span class="chip">会話②</span><span class="chip">会話③</span></div>
+      <div class="ar">↓</div>
+      <div class="chip" style="border-color:var(--accent);">毎回 AGENTS.md を読む</div>
+      <div class="ar">↓</div>
+      <div class="ok">✓ 同じ前提・ブレない出力</div>
+    </div>
   </div>
   <span class="kick">柱②</span><span class="sno">11</span>
 </div>
@@ -452,7 +479,15 @@
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
   <div class="head-row"><span class="secno">07</span><h2>ユースケース① <span class="hl">個人開発</span></h2></div>
   <div class="cols c2" style="align-items:center;">
-    <div class="imgbox" style="height:270px;"><div class="ic">💼</div>1人開発の効率化<small>テスト/規約を書いてAIに任せる</small></div>
+    <div class="vstack" style="height:270px;">
+      <div class="chip">あなた（開発者）</div>
+      <div class="ar">↓</div>
+      <div class="chip" style="border-color:var(--accent);">AGENTS.md に手順・規約を書く</div>
+      <div class="ar">↓</div>
+      <div class="chip">AI（Codex 等）が作業</div>
+      <div class="ar">↓</div>
+      <div class="ok">✓ テスト通過・前提どおり</div>
+    </div>
     <div><p style="font-size:18px;line-height:1.8;">ビルド・テスト・規約を AGENTS.md に書いておけば、Codex などに作業を任せても前提が崩れにくい。</p>
       <p style="font-size:14px;color:var(--ink-mid);margin-top:10px;">⚠️ 効果は使い方次第。断定や誇張はしない</p></div>
   </div>
@@ -466,7 +501,7 @@
   <div class="cols c2" style="align-items:center;">
     <div><p style="font-size:18px;line-height:1.8;">大きなリポジトリは<span class="hl">パッケージごとに AGENTS.md を入れ子</span>で置ける。エージェントは“最も近い”ファイルを優先して読む。✅</p>
       <p style="font-size:14px;color:var(--ink-mid);margin-top:10px;">例：OpenAI のリポジトリには 88 個の AGENTS.md があるとされる 🔶</p></div>
-    <div class="imgbox" style="height:270px;"><div class="ic">🌳</div>入れ子の優先順位<small>近いファイルが後勝ち</small></div>
+    <div class="tree" style="height:270px;display:flex;flex-direction:column;justify-content:center;">my-repo/<br>├ <span class="hi">AGENTS.md</span> <span class="cm">← 全体共通のルール</span><br>└ apps/web/<br>&nbsp;&nbsp;&nbsp;└ <span class="hi">AGENTS.md</span> <span class="cm">← 近い方が優先</span></div>
   </div>
   <span class="kick">ユースケース②</span><span class="sno">23</span>
 </div>
@@ -539,13 +574,15 @@
 <!-- 29 注意・確度 -->
 <div class="slide">
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
-  <div class="head-row"><span class="secno">08</span><h2>読むときの注意</h2></div>
-  <div class="note-box"><h3>⚠️ この資料の確度</h3>
-    <ul><li>✅公式確認済み ／ 🔶一次情報あり（流動的） ／ ⚠️未確認・推測</li>
-    <li>採用数・スター数・対応ツールは変動する（公式の最新を正とする）</li>
-    <li>ガバナンス（Linux Foundation 配下）は新しめの情報 🔶</li>
-    <li>Claude Code のネイティブ対応は未実装・要望中 🔶</li></ul></div>
-  <span class="kick">注意・確度</span><span class="sno">29</span>
+  <div class="head-row"><span class="secno">08</span><h2>現場の知見（X・実務者の声）</h2></div>
+  <ul class="checks">
+    <li>AGENTS.md＝「プロジェクトの憲法」、細かい技は Skills/memory へ役割分担 🔶</li>
+    <li>巨大化させない：足しすぎるとAIが安全側に倒れ、編集を避けがち 🔶</li>
+    <li>「守らない」の主因は“その回に読んでいない”こと → 重要事項は冒頭へ ⚠️</li>
+    <li>CLAUDE.md は AGENTS.md を @import する形に（正本＝AGENTS.md）✅</li>
+    <li>古いルールは定期的に棚卸し。日本語で書くと日本語遵守も上がりやすい ⚠️</li>
+  </ul>
+  <span class="kick">現場の知見</span><span class="sno">29</span>
 </div>
 
 <!-- 30 ロードマップ -->

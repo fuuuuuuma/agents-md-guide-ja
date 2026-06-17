@@ -141,6 +141,11 @@
   footer .cta{background:var(--accent);color:var(--ink);border-radius:999px;padding:11px 24px;font-family:var(--head);font-weight:900;font-size:14px;text-decoration:none;display:inline-flex;align-items:center;gap:7px;}
   footer .src{font-size:12px;color:#9C9C96;margin-top:16px;line-height:1.8;} footer .src a{color:var(--accent);text-decoration:none;}
   .secsub{font-family:var(--head);font-weight:900;font-size:15px;color:var(--ink);margin:18px 0 10px;}
+  /* 図解モックアップ（画像枠の差し替え） */
+  .mock{border:1.5px solid var(--line);border-radius:12px;background:var(--paper);box-shadow:0 3px 12px rgba(0,0,0,.05);overflow:hidden;}
+  .mock .bar{background:var(--brand);color:#fff;font-family:var(--head);font-weight:900;font-size:13px;padding:9px 14px;display:flex;align-items:center;gap:7px;}
+  .mock .code{padding:14px 16px;font-family:ui-monospace,Menlo,monospace;font-size:13px;line-height:1.85;color:var(--ink);}
+  .mock .code .h{color:var(--brand-deep);font-weight:700;} .mock .code .cm{color:var(--ink-mid);}
 </style>
 </head>
 <body>
@@ -201,7 +206,8 @@
     <div class="sec-h"><div class="no">1</div><h2>AGENTS.md とは？／全体像</h2></div>
     <div class="row2">
       <div><p class="body">AGENTS.md は、ひとことで言うと <span class="hl">「AIエージェント向けのREADME」</span>。プロジェクト直下に置くと、対応AIが作業前に自動で読み、手順・規約・禁止事項を把握します。中身は<span class="hl">ただのMarkdown</span>で、必須項目はありません。比喩でいえば「新メンバーへの引き継ぎメモ」です。✅</p></div>
-      <div class="imgbox"><div class="ic">📄</div>AGENTS.md（Markdown）<small>本番は公式の例／実ファイルのスクショを配置</small></div>
+      <div class="mock"><div class="bar">📄 AGENTS.md</div>
+        <div class="code"><span class="h">## テスト</span><br>- 実行: npm test<br><span class="h">## コード規約</span><br>- 2スペース / camelCase<br><span class="h">## やらないこと</span><br>- /legacy は変更しない</div></div>
     </div>
     <div class="secsub">読み込みの流れ</div>
     <div class="flow">
@@ -335,12 +341,12 @@
       <div class="row"><span class="tbadge">1週間</span><div><b>育てる</b><p>やらかした箇所だけ1行ずつ足す</p></div></div>
       <div class="row"><span class="tbadge">1か月</span><div><b>入れ子化／連携</b><p>モノレポは入れ子、Claude Codeは@importで橋渡し</p></div></div>
     </div>
-    <div class="secsub">読むときの注意（確度）</div>
-    <div class="box"><h3>⚠️ この資料の読み方</h3>
-      <ul><li>✅公式確認済み ／ 🔶一次情報あり（流動的） ／ ⚠️未確認・推測</li>
-      <li>採用数・スター数・対応ツールは変動する（公式の最新を正とする）</li>
-      <li>ガバナンス（Linux Foundation 配下）・Claude Code ネイティブ対応は要追跡 🔶</li>
-      <li>X由来の“感想”は個人差あり。誇張・断定保証はしない ⚠️</li></ul></div>
+    <div class="secsub">現場の知見（X・実務者の声）🔶⚠️</div>
+    <div class="box"><h3>X上の運用ノウハウ（個人差あり）</h3>
+      <ul><li>AGENTS.md＝「プロジェクトの憲法」、細かい技は Skills/memory へ 🔶</li>
+      <li>巨大化させない（足しすぎるとAIが安全側に倒れ、編集を避けがち）🔶</li>
+      <li>「守らない」の主因は“その回に読んでいない”→ 重要事項は冒頭へ ⚠️</li>
+      <li>CLAUDE.md は AGENTS.md を @import（正本＝AGENTS.md）✅／古いルールは定期棚卸し ⚠️</li></ul></div>
   </section>
 
   <footer>
