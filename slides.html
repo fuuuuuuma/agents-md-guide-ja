@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>【大枠・ダミー】AIエージェント/Kawaru スライド — 〇〇 徹底解説（32枚）</title>
+<title>AGENTS.md 徹底解説 — はじめての人でも分かる完全ガイド（2026）</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
   /* ===== セマンティックトークン（テーマはこの :root 値だけ差し替え）===== */
@@ -158,11 +158,9 @@
   .nav-btn{background:var(--paper);border:1.5px solid var(--line);color:var(--brand-deep);padding:9px 26px;border-radius:10px;cursor:pointer;font-family:var(--head);font-size:14px;font-weight:700;transition:.18s;}
   .nav-btn:hover{border-color:var(--brand);background:var(--brand-soft);}
   .counter{color:var(--ink-mid);font-size:14px;min-width:70px;text-align:center;}
-  .draft-tag{position:fixed;top:10px;left:10px;background:var(--brand-deep);color:#fff;font-size:11px;font-weight:700;padding:4px 10px;border-radius:5px;z-index:99;letter-spacing:.4px;}
 </style>
 </head>
 <body>
-<div class="draft-tag">大枠プレビュー / ダミー文 / AIエージェント・Kawaru theme / 32枚</div>
 <svg style="display:none">
   <symbol id="kawaru-logo" viewBox="0 0 406 93">
     <rect x="6.67572e-06" y="13.4815" width="7.93029" height="74.5447" fill="currentColor"/>
@@ -179,11 +177,11 @@
 <div class="slide active"><span class="coin"></span>
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
   <div class="dots tl"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-  <p class="eyebrow">AI を使いこなす</p>
-  <h1 style="font-size:58px;"><span class="hl">〇〇</span> 徹底解説<br>はじめての人でも分かる完全ガイド</h1>
+  <p class="eyebrow">AI に仕事を任せる時代の基本</p>
+  <h1 style="font-size:54px;"><span class="hl">AGENTS.md</span> 徹底解説<br>はじめての人でも分かる完全ガイド</h1>
   <div class="sep"></div>
-  <p class="lead" style="font-weight:700;">〇〇って結局なに？ 何ができて、どう実務に活かすのか——この1本で全部整理する</p>
-  <span class="yen-chip" style="margin-top:20px;">2026年版・ダミー</span>
+  <p class="lead" style="font-weight:700;">AGENTS.md って結局なに？ AIエージェント向けの“共通の指示書”を、この1本で全部整理する</p>
+  <span class="yen-chip" style="margin-top:20px;">2026年版</span>
   <span class="kick">AIエージェント/Kawaru</span><span class="sno">1</span>
 </div>
 
@@ -192,10 +190,10 @@
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
   <p class="eyebrow">はじめに</p><h2 class="stitle">この資料の読み方</h2>
   <ul class="checks">
-    <li>専門知識ゼロでも分かるように、日常語と図解で説明します（ダミー）</li>
-    <li>確度マーク: <span class="hl">✅公式確認済み</span> ／ 🔶一次情報あり ／ ⚠️未確認・推測</li>
-    <li>数字・価格・成果はすべてダミー。本番は出典付きの確定情報に差し替え（景表法に注意）</li>
-    <li>最新の仕様は公式サイトでご確認ください</li>
+    <li>専門知識ゼロでも分かるように、日常語と図解で説明します</li>
+    <li>確度マーク: <span class="hl">✅公式確認済み</span> ／ 🔶一次情報あり（流動的） ／ ⚠️未確認・推測</li>
+    <li>数値（採用数・スター数など）は変動します。最終確認は公式サイト agents.md で</li>
+    <li>本資料は非公式まとめ。AGENTS.md プロジェクト・各ベンダーとは無関係です</li>
   </ul>
   <span class="kick">この資料について</span><span class="sno">2</span>
 </div>
@@ -205,13 +203,13 @@
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
   <p class="eyebrow">CONTENTS</p><h2 class="stitle">この資料の流れ</h2>
   <ul class="toc">
-    <li><span>1</span>〇〇とは／全体像</li>
-    <li><span>2</span>なぜ今〇〇なのか</li>
+    <li><span>1</span>AGENTS.md とは／全体像</li>
+    <li><span>2</span>なぜ今 AGENTS.md なのか</li>
     <li><span>3</span>何がすごいのか（3本柱）</li>
-    <li><span>4</span>従来・競合との違い</li>
-    <li><span>5</span>料金とできること</li>
+    <li><span>4</span>他のファイルとの違い</li>
+    <li><span>5</span>中身：何を書くのか</li>
     <li><span>6</span>使い方（初心者基準）</li>
-    <li><span>7</span>ユースケースと活用例</li>
+    <li><span>7</span>Claude Code でどう使うか</li>
     <li><span>8</span>FAQ・注意点・まとめ</li>
   </ul>
   <span class="kick">目次</span><span class="sno">3</span>
@@ -222,9 +220,9 @@
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
   <p class="eyebrow">まず3行で</p><h2 class="stitle">結論</h2>
   <div class="tldr">
-    <div class="t"><div class="k">POINT 1</div><p>〇〇は△△を自動でやってくれる新ツール（ダミー）</p></div>
-    <div class="t"><div class="k">POINT 2</div><p>設定いらず、話しかけるだけで□□が進む（ダミー）</p></div>
-    <div class="t"><div class="k">POINT 3</div><p>無料で試せて、慣れたら本格活用まで（ダミー）</p></div>
+    <div class="t"><div class="k">POINT 1</div><p>AGENTS.md は「AI向けのREADME」。AIが作業前に自動で読む指示書</p></div>
+    <div class="t"><div class="k">POINT 2</div><p>ベンダー中立のオープン標準。20以上のツール対応・約6万プロジェクトで採用</p></div>
+    <div class="t"><div class="k">POINT 3</div><p>Claude Code は“そのまま”は読まない → @import か symlink で橋渡し</p></div>
   </div>
   <span class="kick">TL;DR</span><span class="sno">4</span>
 </div>
@@ -234,22 +232,22 @@
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
   <h2 class="stitle">こんな悩み、ありませんか？</h2>
   <ul class="bullets">
-    <li>やることが多すぎて、作業に追われている（ダミー）</li>
-    <li>新しく始めたいけど、何から手をつければいいか分からない</li>
-    <li>ツールが難しそうで、結局使えていない</li>
+    <li>AIに毎回、同じ前提やルールを説明している</li>
+    <li>ツールごとに設定ファイルがバラバラで管理が大変</li>
+    <li>会話が長くなると出力がブレて、手戻りが増える</li>
   </ul>
-  <p class="lead" style="margin-top:18px;">→ その悩み、<span class="hl">〇〇</span>でまるごと変わるかもしれません</p>
+  <p class="lead" style="margin-top:18px;">→ その悩み、<span class="hl">AGENTS.md</span> 1枚で整理できるかもしれません</p>
   <span class="kick">問題提起</span><span class="sno">5</span>
 </div>
 
 <!-- 06 とは -->
 <div class="slide">
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
-  <div class="head-row"><span class="secno">01</span><h2>〇〇とは？</h2></div>
+  <div class="head-row"><span class="secno">01</span><h2>AGENTS.md とは？</h2></div>
   <div class="cols c2" style="align-items:center;">
-    <div><p style="font-size:20px;line-height:1.8;font-weight:600;">〇〇は、ひとことで言うと <span class="hl">「△△を任せられる相棒」</span>。これまで手作業だった□□を、お願いするだけで進めてくれます。（ダミー本文）</p>
-      <p style="font-size:16px;color:var(--ink-mid);line-height:1.7;margin-top:16px;">料理でいえば「材料を渡してメニューを伝えるだけ」の感覚。専門知識は要りません。（ダミー比喩）</p></div>
-    <div class="imgbox" style="height:300px;"><div class="ic">🖼️</div>〇〇の画面イメージ<small>本番では公式スクショ／図解を配置</small></div>
+    <div><p style="font-size:20px;line-height:1.8;font-weight:600;">AGENTS.md は、ひとことで言うと <span class="hl">「AIエージェント向けのREADME」</span>。プロジェクト直下に置くと、対応AIが<span class="hl">作業前に自動で読んで</span>、手順やルールを把握します。✅</p>
+      <p style="font-size:16px;color:var(--ink-mid);line-height:1.7;margin-top:16px;">比喩でいえば「新メンバーへの引き継ぎメモ」。動かし方・規約・地雷を1枚にまとめて渡すイメージです。</p></div>
+    <div class="imgbox" style="height:300px;"><div class="ic">📄</div>AGENTS.md（ただのMarkdown）<small>本番では公式の例／実ファイルのスクショを配置</small></div>
   </div>
   <span class="kick">定義</span><span class="sno">6</span>
 </div>
@@ -257,30 +255,30 @@
 <!-- 07 全体像（フロー図） -->
 <div class="slide">
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
-  <div class="head-row"><span class="secno">01</span><h2>〇〇の全体像</h2></div>
+  <div class="head-row"><span class="secno">01</span><h2>AGENTS.md の全体像</h2></div>
   <div class="flow">
-    <div class="step"><div class="t">① 伝える</div><div class="d">やりたいことを言葉で（ダミー）</div></div>
+    <div class="step"><div class="t">① 置く</div><div class="d">ルートに AGENTS.md を作成</div></div>
     <div class="arrow">→</div>
-    <div class="step"><div class="t">② 〇〇が処理</div><div class="d">△△を自動で実行</div></div>
+    <div class="step"><div class="t">② 自動で読む</div><div class="d">エージェントが作業前に参照</div></div>
     <div class="arrow">→</div>
-    <div class="step"><div class="t">③ 受け取る</div><div class="d">成果物が返ってくる</div></div>
+    <div class="step"><div class="t">③ 前提が揃う</div><div class="d">手順・規約を理解した状態に</div></div>
     <div class="arrow">→</div>
-    <div class="step"><div class="t">④ 活かす</div><div class="d">仕事・実務に展開</div></div>
+    <div class="step"><div class="t">④ 手戻り減</div><div class="d">やり直しが減り一貫性UP</div></div>
   </div>
-  <p class="ghost">※ 図はダミー。本番は公式の処理フロー／アーキテクチャに差し替え</p>
+  <p class="ghost">※ 本番は公式の読み込みフロー図に差し替え可</p>
   <span class="kick">全体像</span><span class="sno">7</span>
 </div>
 
 <!-- 08 なぜ今（スタット） -->
 <div class="slide">
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
-  <div class="head-row"><span class="secno">02</span><h2>なぜ今 〇〇 なのか</h2></div>
+  <div class="head-row"><span class="secno">02</span><h2>なぜ今 AGENTS.md なのか</h2></div>
   <div class="stats">
-    <div class="stat"><div class="n">〇〇<small>万</small></div><div class="u">ユーザー数（ダミー）</div><div class="l">急拡大中 ⚠️未確認</div></div>
-    <div class="stat"><div class="n">〇<small>倍</small></div><div class="u">作業時間の短縮（ダミー）</div><div class="l">体感ベース</div></div>
-    <div class="stat"><div class="n">無料<small>〜</small></div><div class="u">はじめやすさ</div><div class="l">まず試せる</div></div>
+    <div class="stat"><div class="n">6<small>万+</small></div><div class="u">採用プロジェクト数</div><div class="l">✅公式記載・🔶変動</div></div>
+    <div class="stat"><div class="n">20<small>+</small></div><div class="u">対応ツールの数</div><div class="l">✅Codex/Cursor等</div></div>
+    <div class="stat"><div class="n">標準</div><div class="u">オープン・ベンダー中立</div><div class="l">Linux Foundation配下 🔶</div></div>
   </div>
-  <p class="ghost">※ 数字はすべてダミー。本番は出典付きの確定値のみ断定で記載</p>
+  <p class="ghost">※ 採用数・対応数は流動的。撮影時点で公式の最新値を確認</p>
   <span class="kick">市場・トレンド</span><span class="sno">8</span>
 </div>
 
@@ -289,9 +287,9 @@
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
   <p class="eyebrow">注目の3つ</p><h2 class="stitle"><span class="secno">03</span>何がすごいのか</h2>
   <div class="cols c3">
-    <div class="card center"><div class="pin">1</div><h3>柱その一</h3><p>ダミー説明。要点を2〜3行で。</p><p class="mark">✅ 公式確認済み</p></div>
-    <div class="card center accent"><div class="pin">2</div><h3>柱その二</h3><p>ダミー説明。要点を2〜3行で。</p><p class="mark">🔶 一次情報あり</p></div>
-    <div class="card center"><div class="pin">3</div><h3>柱その三</h3><p>ダミー説明。要点を2〜3行で。</p><p class="mark">✅ 公式確認済み</p></div>
+    <div class="card center"><div class="pin">1</div><h3>乱立を1枚に</h3><p>ツール毎の設定を共通の1ファイルに集約できる。</p><p class="mark">✅ 公式確認済み</p></div>
+    <div class="card center accent"><div class="pin">2</div><h3>一貫性UP</h3><p>作業の起点で毎回読むので前提が揃い、手戻りが減る。</p><p class="mark">🔶 一次情報あり</p></div>
+    <div class="card center"><div class="pin">3</div><h3>ロックインなし</h3><p>オープン標準。ツールを乗り換えても使い回せる。</p><p class="mark">✅ 公式確認済み</p></div>
   </div>
   <span class="kick">3本柱</span><span class="sno">9</span>
 </div>
@@ -299,11 +297,11 @@
 <!-- 10 柱① -->
 <div class="slide">
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
-  <div class="head-row"><span class="secno">03</span><h2>柱① <span class="hl">△△が自動</span></h2></div>
+  <div class="head-row"><span class="secno">03</span><h2>柱① <span class="hl">設定の乱立を1枚に収束</span></h2></div>
   <div class="cols c2" style="align-items:center;">
-    <div class="imgbox" style="height:280px;"><div class="ic">📊</div>柱①の図解<small>仕組み／ビフォーアフター等</small></div>
-    <div><ul class="checks"><li>ダミー: できることA</li><li>ダミー: できることB</li><li>ダミー: できることC</li></ul>
-      <p style="font-size:15px;color:var(--ink-mid);margin-top:12px;">補足のダミー本文がここに入ります。</p></div>
+    <div class="imgbox" style="height:280px;"><div class="ic">🗂️</div>1ファイル → 多ツール<small>1つのAGENTS.mdを各ツールが読む図</small></div>
+    <div><ul class="checks"><li>ツールごとに書き直さなくていい</li><li>.cursorrules 等の集約先になる</li><li>チームで同じルールを共有できる</li></ul>
+      <p style="font-size:15px;color:var(--ink-mid);margin-top:12px;">「1回書けば、多くのエージェントに効く」状態を目指せます。✅</p></div>
   </div>
   <span class="kick">柱①</span><span class="sno">10</span>
 </div>
@@ -311,11 +309,11 @@
 <!-- 11 柱② -->
 <div class="slide">
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
-  <div class="head-row"><span class="secno">03</span><h2>柱② <span class="hl">□□がかんたん</span></h2></div>
+  <div class="head-row"><span class="secno">03</span><h2>柱② <span class="hl">出力の一貫性・手戻り減</span></h2></div>
   <div class="cols c2" style="align-items:center;">
-    <div><ul class="checks"><li>ダミー: ポイントA</li><li>ダミー: ポイントB</li><li>ダミー: ポイントC</li></ul>
-      <p style="font-size:15px;color:var(--ink-mid);margin-top:12px;">補足のダミー本文がここに入ります。</p></div>
-    <div class="imgbox" style="height:280px;"><div class="ic">🖼️</div>柱②の図解<small>画面例／操作イメージ</small></div>
+    <div><ul class="checks"><li>作業の起点で毎回 AGENTS.md を読む</li><li>会話が長くても前提がブレにくい</li><li>テスト/ビルド手順を毎回伝えなくていい</li></ul>
+      <p style="font-size:15px;color:var(--ink-mid);margin-top:12px;">現場では「一貫性が上がった」「チーム開発で効く」の声（🔶個人差あり）。</p></div>
+    <div class="imgbox" style="height:280px;"><div class="ic">🔁</div>ブレない出力<small>同じ前提で実行されるイメージ</small></div>
   </div>
   <span class="kick">柱②</span><span class="sno">11</span>
 </div>
@@ -323,11 +321,11 @@
 <!-- 12 柱③ -->
 <div class="slide">
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
-  <div class="head-row"><span class="secno">03</span><h2>柱③ <span class="hl">×× に広げられる</span></h2></div>
+  <div class="head-row"><span class="secno">03</span><h2>柱③ <span class="hl">オープン標準で広がる</span></h2></div>
   <div class="cols c3">
-    <div class="card center"><div class="pin">A</div><h3>展開先A</h3><p>ダミー説明。</p></div>
-    <div class="card center"><div class="pin">B</div><h3>展開先B</h3><p>ダミー説明。</p></div>
-    <div class="card center"><div class="pin">C</div><h3>展開先C</h3><p>ダミー説明。</p></div>
+    <div class="card center"><div class="pin">A</div><h3>ベンダー中立</h3><p>特定企業の製品ではなく業界横断の取り決め。</p></div>
+    <div class="card center"><div class="pin">B</div><h3>乗り換え自由</h3><p>ツールを変えても AGENTS.md はそのまま。</p></div>
+    <div class="card center"><div class="pin">C</div><h3>協調で策定</h3><p>Codex・Amp・Jules・Cursor・Factory 発。</p></div>
   </div>
   <span class="kick">柱③</span><span class="sno">12</span>
 </div>
@@ -337,9 +335,9 @@
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
   <div class="head-row"><span class="secno">04</span><h2>導入前 → 導入後</h2></div>
   <div class="ba">
-    <div class="panel before"><span class="tag">Before</span><ul><li>手作業で時間がかかる（ダミー）</li><li>属人化して回らない</li><li>始めるハードルが高い</li></ul></div>
+    <div class="panel before"><span class="tag">Before</span><ul><li>毎回チャットで前提を説明</li><li>ツール毎に設定がバラバラ</li><li>出力がブレて手戻りが多い</li></ul></div>
     <div class="mid">→</div>
-    <div class="panel after"><span class="tag">After</span><ul><li>頼むだけで進む（ダミー）</li><li>仕組み化できる</li><li>無料で今日から</li></ul></div>
+    <div class="panel after"><span class="tag">After</span><ul><li>1枚に書いて共有</li><li>共通標準にまとまる</li><li>前提が揃い手戻りが減る</li></ul></div>
   </div>
   <span class="kick">ビフォーアフター</span><span class="sno">13</span>
 </div>
@@ -347,57 +345,58 @@
 <!-- 14 比較表 -->
 <div class="slide">
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
-  <div class="head-row"><span class="secno">04</span><h2>従来との違い</h2></div>
-  <table class="cmp"><thead><tr><th>観点</th><th>〇〇</th><th>従来のやり方</th></tr></thead>
-    <tbody><tr><td>むずかしさ</td><td class="yes">かんたん</td><td class="no">むずかしい</td></tr>
-    <tr><td>かかる時間</td><td class="yes">短い</td><td class="no">長い</td></tr>
-    <tr><td>はじめやすさ</td><td class="yes">無料〜</td><td class="no">初期コスト大</td></tr>
-    <tr><td>実務への展開</td><td class="yes">しやすい</td><td class="no">手間</td></tr></tbody></table>
-  <p class="ghost">※ 内容はダミー</p>
+  <div class="head-row"><span class="secno">04</span><h2>従来（ツール独自の設定）との違い</h2></div>
+  <table class="cmp"><thead><tr><th>観点</th><th>AGENTS.md</th><th>ツール独自の設定</th></tr></thead>
+    <tbody><tr><td>対応ツール</td><td class="yes">20以上に共通</td><td class="no">そのツールだけ</td></tr>
+    <tr><td>乗り換え</td><td class="yes">そのまま使える</td><td class="no">書き直し</td></tr>
+    <tr><td>形式</td><td class="yes">ただのMarkdown</td><td class="no">独自記法も</td></tr>
+    <tr><td>チーム共有</td><td class="yes">しやすい</td><td class="no">バラつく</td></tr></tbody></table>
+  <p class="ghost">※ .cursorrules 等は AGENTS.md への集約が進む（🔶）</p>
   <span class="kick">従来との違い</span><span class="sno">14</span>
 </div>
 
-<!-- 15 競合マトリクス -->
+<!-- 15 早見表（主要ファイル） -->
 <div class="slide">
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
-  <div class="head-row"><span class="secno">04</span><h2>競合との比較</h2></div>
-  <table class="cmp"><thead><tr><th>機能</th><th>〇〇</th><th>競合A</th><th>競合B</th><th>競合C</th></tr></thead>
-    <tbody><tr><td>日本語対応</td><td class="yes">◎</td><td>○</td><td class="no">△</td><td>○</td></tr>
-    <tr><td>料金（ダミー）</td><td class="yes">無料〜</td><td>$XX</td><td>$XX</td><td class="no">$XX</td></tr>
-    <tr><td>学習コスト</td><td class="yes">低</td><td>中</td><td class="no">高</td><td>中</td></tr>
-    <tr><td>自動化</td><td class="yes">◎</td><td class="no">×</td><td>○</td><td>○</td></tr></tbody></table>
-  <p class="ghost">※ マトリクスはダミー。本番は出典付きで</p>
-  <span class="kick">競合マトリクス</span><span class="sno">15</span>
+  <div class="head-row"><span class="secno">04</span><h2>主要ファイルの早見表</h2></div>
+  <table class="cmp"><thead><tr><th>観点</th><th>AGENTS.md</th><th>README.md</th><th>CLAUDE.md</th><th>.cursorrules</th></tr></thead>
+    <tbody><tr><td>主な読み手</td><td class="yes">AI全般</td><td>人間</td><td>Claude Code</td><td>主にCursor</td></tr>
+    <tr><td>対応範囲</td><td class="yes">20+ツール</td><td>—</td><td>Claude</td><td class="no">Cursor</td></tr>
+    <tr><td>標準性</td><td class="yes">中立標準</td><td>—</td><td>固有</td><td class="no">旧来型</td></tr>
+    <tr><td>形式</td><td class="yes">Markdown</td><td>Markdown</td><td>Markdown</td><td>独自</td></tr></tbody></table>
+  <p class="ghost">※ 「人間＝README／AI共通＝AGENTS.md／Claude上乗せ＝CLAUDE.md」</p>
+  <span class="kick">早見表</span><span class="sno">15</span>
 </div>
 
-<!-- 16 料金 -->
+<!-- 16 導入コストと前提 -->
 <div class="slide">
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
-  <div class="head-row"><span class="secno">05</span><h2>料金・プラン</h2></div>
+  <div class="head-row"><span class="secno">05</span><h2>導入コストと前提</h2></div>
   <div class="price">
-    <div class="p"><div class="name">無料</div><div class="amt">¥0</div><ul><li>基本機能（ダミー）</li><li>お試しに最適</li></ul></div>
-    <div class="p best"><div class="name">スタンダード</div><div class="amt">¥XX<small>/月</small></div><ul><li>制限解除（ダミー）</li><li>本格利用向け</li><li>サポート</li></ul></div>
-    <div class="p"><div class="name">プロ</div><div class="amt">¥XX<small>/月</small></div><ul><li>全機能（ダミー）</li><li>チーム利用</li></ul></div>
+    <div class="p"><div class="name">AGENTS.md 自体</div><div class="amt">¥0</div><ul><li>オープン標準・誰でも無料</li><li>必要なのはテキストだけ</li><li>必須項目なし（普通のMarkdown）</li></ul></div>
+    <div class="p best"><div class="name">対応ツール</div><div class="amt">20<small>+</small></div><ul><li>Codex／Cursor／Copilot 等</li><li>多くは無料枠から試せる</li><li>ツール側の料金は各社による</li></ul></div>
+    <div class="p"><div class="name">サイズの目安</div><div class="amt">32<small>KiB/file</small></div><ul><li>例：Codex の上限</li><li>長すぎ注意・最小主義が基本</li><li>✅ツール固有の挙動</li></ul></div>
   </div>
-  <p class="ghost">※ 価格はすべてダミー。本番は公式の確定価格に差し替え</p>
-  <span class="kick">料金</span><span class="sno">16</span>
+  <p class="ghost">※ ツール側の料金・上限は各社の公式で確認（数値は流動的）</p>
+  <span class="kick">コスト・前提</span><span class="sno">16</span>
 </div>
 
-<!-- 17 できること -->
+<!-- 17 書ける項目 -->
 <div class="slide">
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
-  <div class="head-row"><span class="secno">05</span><h2>できること一覧</h2></div>
+  <div class="head-row"><span class="secno">05</span><h2>AGENTS.md に書ける項目</h2></div>
   <div class="feat">
-    <div class="f"><div class="ic">①</div><b>機能A</b><span>ダミー</span></div>
-    <div class="f"><div class="ic">②</div><b>機能B</b><span>ダミー</span></div>
-    <div class="f"><div class="ic">③</div><b>機能C</b><span>ダミー</span></div>
-    <div class="f"><div class="ic">④</div><b>機能D</b><span>ダミー</span></div>
-    <div class="f"><div class="ic">⑤</div><b>機能E</b><span>ダミー</span></div>
-    <div class="f"><div class="ic">⑥</div><b>機能F</b><span>ダミー</span></div>
-    <div class="f"><div class="ic">⑦</div><b>機能G</b><span>ダミー</span></div>
-    <div class="f"><div class="ic">⑧</div><b>機能H</b><span>ダミー</span></div>
+    <div class="f"><div class="ic">概</div><b>プロジェクト概要</b><span>何のプロジェクトか</span></div>
+    <div class="f"><div class="ic">⚙</div><b>ビルド/テスト</b><span>具体コマンド</span></div>
+    <div class="f"><div class="ic">規</div><b>コード規約</b><span>命名・整形</span></div>
+    <div class="f"><div class="ic">試</div><b>テスト手順</b><span>通すチェック</span></div>
+    <div class="f"><div class="ic">安</div><b>セキュリティ</b><span>触らない範囲</span></div>
+    <div class="f"><div class="ic">📝</div><b>コミット作法</b><span>接頭辞など</span></div>
+    <div class="f"><div class="ic">PR</div><b>PRの作法</b><span>タイトル形式</span></div>
+    <div class="f"><div class="ic">💡</div><b>開発のヒント</b><span>環境tips</span></div>
   </div>
-  <span class="kick">できること</span><span class="sno">17</span>
+  <p class="ghost">※ 公式サンプルの最小構成は「環境tips／テスト手順／PRの作法」✅</p>
+  <span class="kick">書ける項目</span><span class="sno">17</span>
 </div>
 
 <!-- 18 使い方フロー -->
@@ -405,33 +404,34 @@
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
   <p class="eyebrow">むずかしくない</p><h2 class="stitle"><span class="secno">06</span>使い方の全体フロー</h2>
   <div class="flow">
-    <div class="step"><div class="t">① 登録</div><div class="d">無料で始める（ダミー）</div></div><div class="arrow">→</div>
-    <div class="step"><div class="t">② 話しかける</div><div class="d">やりたいことを伝える</div></div><div class="arrow">→</div>
-    <div class="step"><div class="t">③ 受け取る</div><div class="d">成果物をチェック</div></div><div class="arrow">→</div>
-    <div class="step"><div class="t">④ 仕組み化</div><div class="d">繰り返しを任せる</div></div>
+    <div class="step"><div class="t">① 作成</div><div class="d">ルートに AGENTS.md</div></div><div class="arrow">→</div>
+    <div class="step"><div class="t">② 書く</div><div class="d">手順・ルール・禁止事項</div></div><div class="arrow">→</div>
+    <div class="step"><div class="t">③ 頼む</div><div class="d">エージェントが自動で読む</div></div><div class="arrow">→</div>
+    <div class="step"><div class="t">④ 育てる</div><div class="d">やらかしを見たら1行足す</div></div>
   </div>
   <span class="kick">使い方フロー</span><span class="sno">18</span>
 </div>
 
-<!-- 19 悩み→こう頼む -->
+<!-- 19 悩み→こう書く -->
 <div class="slide">
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
-  <div class="head-row"><span class="secno">06</span><h2>こんな悩み → こう頼むだけ</h2></div>
+  <div class="head-row"><span class="secno">06</span><h2>こんな悩み → AGENTS.md にこう書く</h2></div>
   <ul class="map">
-    <li><span class="q">「資料を作るのが大変」</span><span class="ar">→</span><span class="a">「〇〇に △△ をお願い」（ダミー）</span></li>
-    <li><span class="q">「毎回の作業が面倒」</span><span class="ar">→</span><span class="a">「□□ を覚えさせて任せる」</span></li>
-    <li><span class="q">「何から始めれば？」</span><span class="ar">→</span><span class="a">まず「××」と話しかける</span></li>
+    <li><span class="q">「テストの動かし方を毎回間違える」</span><span class="ar">→</span><span class="a">「テストは npm test。push前に必ず通す」</span></li>
+    <li><span class="q">「余計なライブラリを足される」</span><span class="ar">→</span><span class="a">「新しい依存は追加しない」</span></li>
+    <li><span class="q">「触ってほしくない所をいじられる」</span><span class="ar">→</span><span class="a">「/legacy 配下は変更禁止」</span></li>
   </ul>
-  <span class="badge" style="margin-top:16px;">あなたは“監督”。やることを伝えるだけ</span>
-  <span class="kick">悩み→依頼</span><span class="sno">19</span>
+  <span class="badge" style="margin-top:16px;">あなたは“監督”。ルールを1枚に書いて渡すだけ</span>
+  <span class="kick">悩み→記述</span><span class="sno">19</span>
 </div>
 
-<!-- 20 プロンプト -->
+<!-- 20 最小AGENTS.md例 -->
 <div class="slide">
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
-  <div class="head-row"><span class="secno">06</span><h2>すぐ試せるプロンプト</h2></div>
-  <div class="prompt"><span class="cm"># そのままコピペで試せる例（ダミー）</span><br><span class="c">&gt;</span> 〇〇について、初心者向けに △△ を作って。□□ は××で。<br><br><span class="cm"># もう一歩</span><br><span class="c">&gt;</span> さっきの成果物を、◯◯向けに整えて保存して</div>
-  <span class="kick">プロンプト例</span><span class="sno">20</span>
+  <div class="head-row"><span class="secno">06</span><h2>そのまま使える“最小 AGENTS.md”</h2></div>
+  <div class="prompt"><span class="cm"># AGENTS.md</span><br><br><span class="c">## テスト</span><br>- 実行: <span class="c">npm test</span><br>- 変更を出す前に必ずテストを通す<br><br><span class="c">## コード規約</span><br>- インデントは2スペース、命名は camelCase<br>- 新しい依存ライブラリは勝手に追加しない<br><br><span class="c">## やらないこと</span><br>- /legacy 配下は変更しない／.env はコミットしない</div>
+  <p class="ghost">※ 必須項目なし。普通のMarkdownでOK ✅</p>
+  <span class="kick">最小サンプル</span><span class="sno">20</span>
 </div>
 
 <!-- 21 実践ステップ -->
@@ -439,61 +439,63 @@
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
   <div class="head-row"><span class="secno">06</span><h2>実践ステップ</h2></div>
   <ul class="steps">
-    <li><span class="n">1</span>無料登録して、まず触ってみる（ダミー）</li>
-    <li><span class="n">2</span>小さなタスクを1つ頼んでみる</li>
-    <li><span class="n">3</span>うまくいったやり方を「型」として保存</li>
-    <li><span class="n">4</span>型を増やして、作業をまるごと任せる</li>
+    <li><span class="n">1</span>ルート（README.md と同じ場所）に AGENTS.md を作成</li>
+    <li><span class="n">2</span>ビルド・テストの具体コマンドを書く</li>
+    <li><span class="n">3</span>禁止事項（触らない場所・依存追加なし等）を書く</li>
+    <li><span class="n">4</span>AIがやらかした箇所だけ、1行ずつ追記して育てる</li>
   </ul>
   <span class="kick">実践ステップ</span><span class="sno">21</span>
 </div>
 
-<!-- 22 ユースケース① -->
+<!-- 22 ユースケース①（個人開発） -->
 <div class="slide">
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
-  <div class="head-row"><span class="secno">07</span><h2>ユースケース① <span class="hl">実務</span></h2></div>
+  <div class="head-row"><span class="secno">07</span><h2>ユースケース① <span class="hl">個人開発</span></h2></div>
   <div class="cols c2" style="align-items:center;">
-    <div class="imgbox" style="height:270px;"><div class="ic">💼</div>事例①の図解<small>before/after・成果イメージ</small></div>
-    <div><p style="font-size:18px;line-height:1.8;">ダミー: こんな人が、こう使って、こう変わった、というストーリーがここに入ります。</p>
-      <p style="font-size:14px;color:var(--ink-mid);margin-top:10px;">⚠️ 具体的な数値は景表法に注意し、出典が取れない数字は書かない</p></div>
+    <div class="imgbox" style="height:270px;"><div class="ic">💼</div>1人開発の効率化<small>テスト/規約を書いてAIに任せる</small></div>
+    <div><p style="font-size:18px;line-height:1.8;">ビルド・テスト・規約を AGENTS.md に書いておけば、Codex などに作業を任せても前提が崩れにくい。</p>
+      <p style="font-size:14px;color:var(--ink-mid);margin-top:10px;">⚠️ 効果は使い方次第。断定や誇張はしない</p></div>
   </div>
   <span class="kick">ユースケース①</span><span class="sno">22</span>
 </div>
 
-<!-- 23 ユースケース② -->
+<!-- 23 ユースケース②（モノレポ/チーム） -->
 <div class="slide">
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
-  <div class="head-row"><span class="secno">07</span><h2>ユースケース② <span class="hl">業務改善</span></h2></div>
+  <div class="head-row"><span class="secno">07</span><h2>ユースケース② <span class="hl">モノレポ・チーム</span></h2></div>
   <div class="cols c2" style="align-items:center;">
-    <div><p style="font-size:18px;line-height:1.8;">ダミー: 少人数チームが、定型業務を任せて、空いた時間を本業に回した例。</p></div>
-    <div class="imgbox" style="height:270px;"><div class="ic">⚙️</div>事例②の図解<small>業務フローの変化</small></div>
+    <div><p style="font-size:18px;line-height:1.8;">大きなリポジトリは<span class="hl">パッケージごとに AGENTS.md を入れ子</span>で置ける。エージェントは“最も近い”ファイルを優先して読む。✅</p>
+      <p style="font-size:14px;color:var(--ink-mid);margin-top:10px;">例：OpenAI のリポジトリには 88 個の AGENTS.md があるとされる ✅</p></div>
+    <div class="imgbox" style="height:270px;"><div class="ic">🌳</div>入れ子の優先順位<small>近いファイルが後勝ち</small></div>
   </div>
   <span class="kick">ユースケース②</span><span class="sno">23</span>
 </div>
 
-<!-- 24 ユースケース③ -->
+<!-- 24 ユースケース③（Claude Code） -->
 <div class="slide">
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
-  <div class="head-row"><span class="secno">07</span><h2>ユースケース③ <span class="hl">発信・コンテンツ</span></h2></div>
+  <div class="head-row"><span class="secno">07</span><h2>ユースケース③ <span class="hl">Claude Code で使う</span></h2></div>
   <div class="cols c3">
-    <div class="card center"><div class="pin">✎</div><h3>下書き</h3><p>ダミー</p></div>
-    <div class="card center"><div class="pin">▷</div><h3>編集</h3><p>ダミー</p></div>
-    <div class="card center"><div class="pin">↑</div><h3>発信</h3><p>ダミー</p></div>
+    <div class="card center"><div class="pin">@</div><h3>import（推奨）</h3><p>CLAUDE.md の中で <b>@AGENTS.md</b> を読み込む。</p></div>
+    <div class="card center"><div class="pin">⛓</div><h3>symlink</h3><p><b>ln -s AGENTS.md CLAUDE.md</b> でリンクする。</p></div>
+    <div class="card center"><div class="pin">!</div><h3>非ネイティブ</h3><p>そのまま読む対応は未実装（要望 #34235）🔶</p></div>
   </div>
+  <p class="ghost">※ Cursor / Windsurf / Cline は AGENTS.md を直接読む（🔶）</p>
   <span class="kick">ユースケース③</span><span class="sno">24</span>
 </div>
 
-<!-- 25 活用サイクル -->
+<!-- 25 育て方サイクル -->
 <div class="slide">
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
-  <div class="head-row"><span class="secno">07</span><h2>活用までの流れ</h2></div>
+  <div class="head-row"><span class="secno">07</span><h2>AGENTS.md の育て方</h2></div>
   <div class="cycle">
-    <div class="node"><b>① 作る</b><span>〇〇で成果物（ダミー）</span></div><span class="ar">→</span>
-    <div class="node"><b>② 届ける</b><span>発信・提供</span></div><span class="ar">→</span>
-    <div class="node"><b>③ 展開</b><span>応用・実践へ</span></div><span class="ar">↻</span>
-    <div class="node"><b>④ 再投資</b><span>仕組みを強化</span></div>
+    <div class="node"><b>① 最小で置く</b><span>まずテスト/規約だけ</span></div><span class="ar">→</span>
+    <div class="node"><b>② 任せる</b><span>AIに作業を頼む</span></div><span class="ar">→</span>
+    <div class="node"><b>③ 見つける</b><span>やらかしを確認</span></div><span class="ar">↻</span>
+    <div class="node"><b>④ 1行足す</b><span>そこだけ追記</span></div>
   </div>
-  <p class="ghost">※ 流れはダミー。数値は出典付きで明示（誇張しない）</p>
-  <span class="kick">活用の流れ</span><span class="sno">25</span>
+  <p class="ghost">※ 最初から完璧を狙わず、問題が起きた箇所だけ足すのが安全</p>
+  <span class="kick">育て方</span><span class="sno">25</span>
 </div>
 
 <!-- 26 数字で見る -->
@@ -501,24 +503,24 @@
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
   <div class="head-row"><span class="secno">07</span><h2>数字で見る（参考）</h2></div>
   <div class="stats">
-    <div class="stat"><div class="n">〇<small>分</small></div><div class="u">1タスクの目安（ダミー）</div><div class="l">⚠️未確認</div></div>
-    <div class="stat"><div class="n">〇<small>件</small></div><div class="u">1日にこなせる量</div><div class="l">体感</div></div>
-    <div class="stat"><div class="n">〇<small>種</small></div><div class="u">作れる成果物の幅</div><div class="l">用途次第</div></div>
+    <div class="stat"><div class="n">88<small>個</small></div><div class="u">OpenAIリポのAGENTS.md</div><div class="l">✅公式記載</div></div>
+    <div class="stat"><div class="n">32<small>KiB</small></div><div class="u">1ファイル上限（Codex）</div><div class="l">✅ツール固有</div></div>
+    <div class="stat"><div class="n">2.2<small>万★</small></div><div class="u">GitHubスター（目安）</div><div class="l">🔶変動</div></div>
   </div>
-  <p class="ghost">※ すべてダミー／参考値。確証のない数値は本番で削除か未確認送り</p>
+  <p class="ghost">※ 数値は作成時点の目安。撮影前に公式で再確認</p>
   <span class="kick">数字で見る</span><span class="sno">26</span>
 </div>
 
-<!-- 27 もう一歩 -->
+<!-- 27 もう一歩（書き方のコツと罠） -->
 <div class="slide">
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
-  <div class="head-row"><span class="secno">07</span><h2>もう一歩進んだ使い方</h2></div>
+  <div class="head-row"><span class="secno">07</span><h2>効く書き方のコツと“罠”</h2></div>
   <ul class="checks">
-    <li>複数のタスクを「型」にして連結する（ダミー・発展）</li>
-    <li>他ツールと組み合わせて自動化を広げる</li>
-    <li>チームで共有して仕組みにする</li>
+    <li>最小主義：コマンド・禁止事項・役割に絞って簡潔に ✅🔶</li>
+    <li>実行可能な情報を優先（このコマンド／このチェック）✅</li>
+    <li>罠：書きすぎると AI が律儀すぎて柔軟性を失う ⚠️</li>
   </ul>
-  <p class="lead" style="margin-top:14px;">※ 重い開発寄りの話は本筋を軽く保つため最小限に</p>
+  <p class="lead" style="margin-top:14px;">※ いきなり大作にせず「最小から始めて足す」が安全</p>
   <span class="kick">もう一歩</span><span class="sno">27</span>
 </div>
 
@@ -527,9 +529,9 @@
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
   <div class="head-row"><span class="secno">08</span><h2>よくある質問</h2></div>
   <div class="faq">
-    <div class="qa"><div class="q">初心者でも使えますか？</div><div class="a">はい、専門知識は不要です（ダミー）</div></div>
-    <div class="qa"><div class="q">無料でどこまでできますか？</div><div class="a">基本機能は無料で試せます（ダミー・本番は確定情報）</div></div>
-    <div class="qa"><div class="q">本当に効果がありますか？</div><div class="a">使い方しだい。断定はできません（誇張・保証は禁止）</div></div>
+    <div class="qa"><div class="q">必須の項目はある？</div><div class="a">いいえ。普通のMarkdownでOK、決まったフィールドはありません ✅</div></div>
+    <div class="qa"><div class="q">README.md は要らなくなる？</div><div class="a">いいえ。人間向けはREADME、AI向けはAGENTS.mdと役割が違います ✅</div></div>
+    <div class="qa"><div class="q">チャット指示とどっちが強い？</div><div class="a">人間の明示的な指示が最優先。AGENTS.mdは“常設のお願い” ✅</div></div>
   </div>
   <span class="kick">FAQ</span><span class="sno">28</span>
 </div>
@@ -539,22 +541,22 @@
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
   <div class="head-row"><span class="secno">08</span><h2>読むときの注意</h2></div>
   <div class="note-box"><h3>⚠️ この資料の確度</h3>
-    <ul><li>✅公式確認済み ／ 🔶一次情報あり ／ ⚠️未確認・推測</li>
-    <li>数値・価格・成果はダミー。本番は出典が取れたものだけ断定で記載</li>
-    <li>「必ず〇〇できる」等の断定保証はしない（誇張禁止）</li>
-    <li>仕様は変わるため、最終確認は公式サイトで</li></ul></div>
+    <ul><li>✅公式確認済み ／ 🔶一次情報あり（流動的） ／ ⚠️未確認・推測</li>
+    <li>採用数・スター数・対応ツールは変動する（公式の最新を正とする）</li>
+    <li>ガバナンス（Linux Foundation 配下）は新しめの情報 🔶</li>
+    <li>Claude Code のネイティブ対応は未実装・要望中 🔶</li></ul></div>
   <span class="kick">注意・確度</span><span class="sno">29</span>
 </div>
 
 <!-- 30 ロードマップ -->
 <div class="slide">
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
-  <div class="head-row"><span class="secno">08</span><h2>これからの流れ</h2></div>
+  <div class="head-row"><span class="secno">08</span><h2>導入のロードマップ</h2></div>
   <div class="timeline">
-    <div class="row"><span class="tbadge">今</span><div><b>まず触る</b><p>無料で試して感覚をつかむ（ダミー）</p></div></div>
-    <div class="row"><span class="tbadge">1週間</span><div><b>型を作る</b><p>うまくいったやり方を保存</p></div></div>
-    <div class="row"><span class="tbadge">1か月</span><div><b>仕組み化</b><p>繰り返しを任せて時間を作る</p></div></div>
-    <div class="row"><span class="tbadge">その先</span><div><b>実務へ展開</b><p>応用・発信へ（ダミー）</p></div></div>
+    <div class="row"><span class="tbadge">今</span><div><b>最小で置く</b><p>ルートに AGENTS.md を作成し、テスト/規約を書く</p></div></div>
+    <div class="row"><span class="tbadge">1週間</span><div><b>追記して育てる</b><p>やらかした箇所だけ1行ずつ足す</p></div></div>
+    <div class="row"><span class="tbadge">1か月</span><div><b>入れ子化</b><p>モノレポはパッケージ毎に AGENTS.md</p></div></div>
+    <div class="row"><span class="tbadge">その先</span><div><b>Claude Code連携</b><p>@AGENTS.md import か symlink で橋渡し</p></div></div>
   </div>
   <span class="kick">ロードマップ</span><span class="sno">30</span>
 </div>
@@ -562,11 +564,11 @@
 <!-- 31 まとめ -->
 <div class="slide">
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
-  <p class="eyebrow">まとめ</p><h2 class="stitle">〇〇は<span class="hl">「とりあえず触る」</span>が正解</h2>
-  <ul class="checks" style="max-width:760px;">
-    <li>むずかしくない。話しかけるだけで△△が進む</li>
-    <li>無料で今日から試せる</li>
-    <li>慣れたら本格活用まで広げられる（ダミー）</li>
+  <p class="eyebrow">まとめ</p><h2 class="stitle">AGENTS.md は<span class="hl">「まず最小で置く」</span>が正解</h2>
+  <ul class="checks" style="max-width:780px;">
+    <li>AI向けのREADME＝AIが作業前に読む共通の指示書</li>
+    <li>1枚で多くのツールに効く・乗り換えても使える</li>
+    <li>育てるほど出力が安定し、手戻りが減る</li>
   </ul>
   <span class="kick">まとめ</span><span class="sno">31</span>
 </div>
@@ -575,9 +577,9 @@
 <div class="slide"><span class="coin" style="top:auto;left:auto;bottom:-42px;right:-36px;"></span>
   <div class="logo"><svg width="118" height="27" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
   <h2 class="stitle">もっと学ぶ</h2>
-  <p class="lead">全文（出典つき）と配布用の1枚資料は概要欄から（ダミー）</p>
+  <p class="lead">全文（出典つき）と配布用の1枚資料は概要欄から</p>
   <span class="pill">チャンネル登録でもっと学ぶ</span>
-  <p class="ghost" style="margin-top:18px;">出典（ダミー）：公式 example.com ／ X x.com/... ／ 本資料は非公式まとめ</p>
+  <p class="ghost" style="margin-top:18px;">出典：公式 agents.md ／ github.com/agentsmd/agents.md ／ X（現場の声・⚠️個人差）／ 本資料は非公式まとめ</p>
   <span class="kick">CTA・出典</span><span class="sno">32</span>
 </div>
 

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>【大枠・ダミー】1枚資料（縦スクロール・図解リッチ）— AIエージェント/Kawaru theme</title>
+<title>AGENTS.md 徹底解説 — 1ページでわかる完全ガイド（2026）</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
   /* ===== セマンティックトークン（テーマはこの :root 値だけ差し替え）===== */
@@ -157,187 +157,199 @@
 </svg>
 
 <div class="doc">
-  <div class="draft-tag">大枠プレビュー / ダミー文 / 1枚資料（縦スクロール・図解リッチ）/ AIエージェント・Kawaru theme</div>
 
   <div class="hero">
     <span class="coin"></span>
     <div class="chan"><svg width="132" height="30" style="color:var(--brand)"><use href="#kawaru-logo"/></svg></div>
     <div class="eyebrow">ONE-PAGE GUIDE</div>
-    <h1><span class="hl">〇〇</span> 徹底解説<br>1ページでわかる完全ガイド</h1>
-    <p class="sub">〇〇って結局なに？ 何ができて、どう実務に活かすのか——この1ページに全体像・比較・使い方・活用例まで詰め込みました。（ダミー）</p>
-    <div class="meta"><span class="k">2026年版</span><span>初心者向け</span><span>所要10分</span><span>図解・比較表つき</span><span>出典つき（予定）</span></div>
+    <h1><span class="hl">AGENTS.md</span> 徹底解説<br>1ページでわかる完全ガイド</h1>
+    <p class="sub">AGENTS.md って結局なに？ AIエージェント向けの“共通の指示書”。全体像・比較・使い方・各ツールでの効かせ方まで、この1ページに詰め込みました。</p>
+    <div class="meta"><span class="k">2026年版</span><span>初心者向け</span><span>所要10分</span><span>図解・比較表つき</span><span>出典つき</span></div>
   </div>
 
   <div class="tocbar">
     <a href="#s1">① とは／全体像</a><a href="#s2">② なぜ今</a><a href="#s3">③ 3本柱</a><a href="#s4">④ 比較</a>
-    <a href="#s5">⑤ 料金・機能</a><a href="#s6">⑥ 使い方</a><a href="#s7">⑦ 事例・活用例</a><a href="#s8">⑧ FAQ・注意</a>
+    <a href="#s5">⑤ 書ける項目</a><a href="#s6">⑥ 使い方</a><a href="#s7">⑦ Claude Code・活用</a><a href="#s8">⑧ FAQ・注意</a>
   </div>
+
+  <!-- 冒頭の提案 -->
+  <section>
+    <div class="sec-h"><div class="no">🎬</div><h2>冒頭の提案（オープニングトーク）</h2></div>
+    <ul class="checks">
+      <li><span class="hl">共感</span>：AGENTS.md って名前は見るけど「結局ただのREADMEでしょ」で止まってる人が多い</li>
+      <li><span class="hl">重要性</span>：今や20以上のAIエージェントが“最初に読む”共通の指示書になりつつある</li>
+      <li><span class="hl">差分（15秒以内）</span>：これ1枚で指示出しが〇%減・手戻りが〇回→〇回 ← 実績を入れる</li>
+      <li><span class="hl">本編宣言</span>：今回は中身・書き方・効かせ方を、コピペテンプレ付きで解説</li>
+    </ul>
+    <p class="note" style="margin-top:8px;">※ 実績数字（〇%・〇回）はプレースホルダ。撮影前に河村さんの実値へ。禁止語（必ず/絶対/確実/裏技/神/ヤバい/衝撃）は不使用。</p>
+  </section>
 
   <!-- TL;DR -->
   <section>
     <div class="sec-h"><div class="no">!</div><h2>まず3行で</h2></div>
     <div class="tldr">
-      <div class="t"><div class="k">POINT 1</div><p>〇〇は △△ を自動でやってくれる新ツール（ダミー）</p></div>
-      <div class="t"><div class="k">POINT 2</div><p>設定いらず、話しかけるだけで □□ が進む（ダミー）</p></div>
-      <div class="t"><div class="k">POINT 3</div><p>無料で試せて、慣れたら本格活用まで（ダミー）</p></div>
+      <div class="t"><div class="k">POINT 1</div><p>AGENTS.md は「AI向けのREADME」。AIが作業前に自動で読む指示書 ✅</p></div>
+      <div class="t"><div class="k">POINT 2</div><p>ベンダー中立のオープン標準。20+ツール対応・約6万プロジェクト採用 ✅🔶</p></div>
+      <div class="t"><div class="k">POINT 3</div><p>Claude Code は“そのまま”読まない → @import か symlink で橋渡し ✅</p></div>
     </div>
     <div class="secsub">こんな悩み、ありませんか？</div>
-    <ul class="bullets"><li>やることが多すぎて作業に追われている（ダミー）</li><li>新しく始めたいが何からか分からない</li><li>ツールが難しそうで使えていない</li></ul>
+    <ul class="bullets"><li>AIに毎回、同じ前提やルールを説明している</li><li>ツールごとに設定ファイルがバラバラ</li><li>会話が長くなると出力がブレて手戻りが増える</li></ul>
   </section>
 
   <!-- 1 とは + 全体像 -->
   <section id="s1">
-    <div class="sec-h"><div class="no">1</div><h2>〇〇とは？／全体像</h2></div>
+    <div class="sec-h"><div class="no">1</div><h2>AGENTS.md とは？／全体像</h2></div>
     <div class="row2">
-      <div><p class="body">〇〇は、ひとことで言うと <span class="hl">「△△を任せられる相棒」</span>。これまで手作業だった □□ を、お願いするだけで進めてくれます。料理でいえば「材料を渡してメニューを伝えるだけ」の感覚です。（ダミー本文）</p></div>
-      <div class="imgbox"><div class="ic">🖼️</div>〇〇の画面イメージ<small>本番は公式スクショ／図解を配置</small></div>
+      <div><p class="body">AGENTS.md は、ひとことで言うと <span class="hl">「AIエージェント向けのREADME」</span>。プロジェクト直下に置くと、対応AIが作業前に自動で読み、手順・規約・禁止事項を把握します。中身は<span class="hl">ただのMarkdown</span>で、必須項目はありません。比喩でいえば「新メンバーへの引き継ぎメモ」です。✅</p></div>
+      <div class="imgbox"><div class="ic">📄</div>AGENTS.md（Markdown）<small>本番は公式の例／実ファイルのスクショを配置</small></div>
     </div>
-    <div class="secsub">処理の流れ</div>
+    <div class="secsub">読み込みの流れ</div>
     <div class="flow">
-      <div class="step"><div class="t">① 伝える</div><div class="d">言葉でお願い</div></div><div class="arrow">→</div>
-      <div class="step"><div class="t">② 処理</div><div class="d">△△を自動実行</div></div><div class="arrow">→</div>
-      <div class="step"><div class="t">③ 受け取る</div><div class="d">成果物が返る</div></div><div class="arrow">→</div>
-      <div class="step"><div class="t">④ 活かす</div><div class="d">仕事・実務へ</div></div>
+      <div class="step"><div class="t">① 置く</div><div class="d">ルートに作成</div></div><div class="arrow">→</div>
+      <div class="step"><div class="t">② 自動で読む</div><div class="d">作業前に参照</div></div><div class="arrow">→</div>
+      <div class="step"><div class="t">③ 前提が揃う</div><div class="d">手順・規約を理解</div></div><div class="arrow">→</div>
+      <div class="step"><div class="t">④ 手戻り減</div><div class="d">一貫性UP</div></div>
     </div>
-    <p class="note" style="margin-top:10px;">※ 図はダミー。本番は公式の処理フロー／アーキテクチャに差し替え</p>
+    <p class="note" style="margin-top:10px;">※ 本番は公式の読み込みフロー図に差し替え可</p>
   </section>
 
   <!-- 2 なぜ今 -->
   <section id="s2">
-    <div class="sec-h"><div class="no">2</div><h2>なぜ今 〇〇 なのか</h2></div>
+    <div class="sec-h"><div class="no">2</div><h2>なぜ今 AGENTS.md なのか</h2></div>
     <div class="stats">
-      <div class="stat"><div class="n">〇〇<small>万</small></div><div class="u">ユーザー数（ダミー）</div><div class="l">急拡大 ⚠️未確認</div></div>
-      <div class="stat"><div class="n">〇<small>倍</small></div><div class="u">作業時間の短縮</div><div class="l">体感ベース</div></div>
-      <div class="stat"><div class="n">無料<small>〜</small></div><div class="u">はじめやすさ</div><div class="l">まず試せる</div></div>
+      <div class="stat"><div class="n">6<small>万+</small></div><div class="u">採用プロジェクト数</div><div class="l">✅公式記載・🔶変動</div></div>
+      <div class="stat"><div class="n">20<small>+</small></div><div class="u">対応ツールの数</div><div class="l">✅Codex/Cursor等</div></div>
+      <div class="stat"><div class="n">標準</div><div class="u">オープン・中立</div><div class="l">Linux Foundation配下 🔶</div></div>
     </div>
-    <p class="note" style="margin-top:10px;">※ 数字はすべてダミー。本番は出典付きの確定値のみ断定で記載</p>
+    <p class="note" style="margin-top:10px;">※ 採用数・対応数は流動的。撮影時点で公式（agents.md）の最新値を確認</p>
   </section>
 
   <!-- 3 3本柱 -->
   <section id="s3">
     <div class="sec-h"><div class="no">3</div><h2>何がすごいのか（3本柱）</h2></div>
     <div class="cards">
-      <div class="c"><div class="pin">1</div><h3>△△が自動</h3><p>ダミー説明。要点を2〜3行で。</p><p class="mark">✅ 公式確認済み</p></div>
-      <div class="c accent"><div class="pin">2</div><h3>□□がかんたん</h3><p>ダミー説明。要点を2〜3行で。</p><p class="mark">🔶 一次情報あり</p></div>
-      <div class="c"><div class="pin">3</div><h3>×× に広がる</h3><p>ダミー説明。要点を2〜3行で。</p><p class="mark">✅ 公式確認済み</p></div>
+      <div class="c"><div class="pin">1</div><h3>乱立を1枚に</h3><p>ツール毎の設定を共通の1ファイルに集約。</p><p class="mark">✅ 公式確認済み</p></div>
+      <div class="c accent"><div class="pin">2</div><h3>一貫性UP</h3><p>作業の起点で毎回読むので前提が揃い手戻り減。</p><p class="mark">🔶 一次情報あり</p></div>
+      <div class="c"><div class="pin">3</div><h3>ロックインなし</h3><p>オープン標準。乗り換えても使い回せる。</p><p class="mark">✅ 公式確認済み</p></div>
     </div>
     <div class="secsub">導入前 → 導入後</div>
     <div class="ba">
-      <div class="panel before"><span class="tag">Before</span><ul><li>手作業で時間がかかる（ダミー）</li><li>属人化して回らない</li><li>始めるハードルが高い</li></ul></div>
+      <div class="panel before"><span class="tag">Before</span><ul><li>毎回チャットで前提を説明</li><li>ツール毎に設定がバラバラ</li><li>出力がブレて手戻りが多い</li></ul></div>
       <div class="mid">→</div>
-      <div class="panel after"><span class="tag">After</span><ul><li>頼むだけで進む（ダミー）</li><li>仕組み化できる</li><li>無料で今日から</li></ul></div>
+      <div class="panel after"><span class="tag">After</span><ul><li>1枚に書いて共有</li><li>共通標準にまとまる</li><li>前提が揃い手戻りが減る</li></ul></div>
     </div>
   </section>
 
   <!-- 4 比較 -->
   <section id="s4">
-    <div class="sec-h"><div class="no">4</div><h2>従来・競合との違い</h2></div>
-    <div class="secsub">従来のやり方との違い</div>
-    <table class="cmp"><thead><tr><th>観点</th><th>〇〇</th><th>従来のやり方</th></tr></thead>
-      <tbody><tr><td>むずかしさ</td><td class="yes">かんたん</td><td class="no">むずかしい</td></tr>
-      <tr><td>かかる時間</td><td class="yes">短い</td><td class="no">長い</td></tr>
-      <tr><td>はじめやすさ</td><td class="yes">無料〜</td><td class="no">初期コスト大</td></tr></tbody></table>
-    <div class="secsub">競合マトリクス</div>
-    <table class="cmp"><thead><tr><th>機能</th><th>〇〇</th><th>競合A</th><th>競合B</th><th>競合C</th></tr></thead>
-      <tbody><tr><td>日本語対応</td><td class="yes">◎</td><td>○</td><td class="no">△</td><td>○</td></tr>
-      <tr><td>料金（ダミー）</td><td class="yes">無料〜</td><td>$XX</td><td>$XX</td><td class="no">$XX</td></tr>
-      <tr><td>学習コスト</td><td class="yes">低</td><td>中</td><td class="no">高</td><td>中</td></tr>
-      <tr><td>自動化</td><td class="yes">◎</td><td class="no">×</td><td>○</td><td>○</td></tr></tbody></table>
-    <p class="note">※ 表はすべてダミー。本番は出典付きの数値に差し替え</p>
+    <div class="sec-h"><div class="no">4</div><h2>他のファイルとの違い</h2></div>
+    <div class="secsub">従来（ツール独自の設定）との違い</div>
+    <table class="cmp"><thead><tr><th>観点</th><th>AGENTS.md</th><th>ツール独自の設定</th></tr></thead>
+      <tbody><tr><td>対応ツール</td><td class="yes">20以上に共通</td><td class="no">そのツールだけ</td></tr>
+      <tr><td>乗り換え</td><td class="yes">そのまま使える</td><td class="no">書き直し</td></tr>
+      <tr><td>形式</td><td class="yes">ただのMarkdown</td><td class="no">独自記法も</td></tr></tbody></table>
+    <div class="secsub">主要ファイルの早見表</div>
+    <table class="cmp"><thead><tr><th>観点</th><th>AGENTS.md</th><th>README.md</th><th>CLAUDE.md</th><th>.cursorrules</th></tr></thead>
+      <tbody><tr><td>主な読み手</td><td class="yes">AI全般</td><td>人間</td><td>Claude Code</td><td>主にCursor</td></tr>
+      <tr><td>対応範囲</td><td class="yes">20+ツール</td><td>—</td><td>Claude</td><td class="no">Cursor</td></tr>
+      <tr><td>標準性</td><td class="yes">中立標準</td><td>—</td><td>固有</td><td class="no">旧来型</td></tr></tbody></table>
+    <p class="note">※ 「人間＝README／AI共通＝AGENTS.md／Claude上乗せ＝CLAUDE.md」。.cursorrules 等は AGENTS.md への集約が進む 🔶</p>
   </section>
 
-  <!-- 5 料金・機能 -->
+  <!-- 5 書ける項目とコスト -->
   <section id="s5">
-    <div class="sec-h"><div class="no">5</div><h2>料金とできること</h2></div>
+    <div class="sec-h"><div class="no">5</div><h2>中身：書ける項目とコスト</h2></div>
     <div class="price">
-      <div class="p"><div class="name">無料</div><div class="amt">¥0</div><ul><li>基本機能（ダミー）</li><li>お試しに最適</li></ul></div>
-      <div class="p best"><div class="name">スタンダード</div><div class="amt">¥XX<small>/月</small></div><ul><li>制限解除（ダミー）</li><li>本格利用向け</li><li>サポート</li></ul></div>
-      <div class="p"><div class="name">プロ</div><div class="amt">¥XX<small>/月</small></div><ul><li>全機能（ダミー）</li><li>チーム利用</li></ul></div>
+      <div class="p"><div class="name">AGENTS.md 自体</div><div class="amt">¥0</div><ul><li>オープン標準・無料</li><li>必要なのはテキストだけ</li><li>必須項目なし</li></ul></div>
+      <div class="p best"><div class="name">対応ツール</div><div class="amt">20<small>+</small></div><ul><li>Codex／Cursor／Copilot 等</li><li>多くは無料枠から</li><li>料金は各社による</li></ul></div>
+      <div class="p"><div class="name">サイズ目安</div><div class="amt">32<small>KiB</small></div><ul><li>例：Codex の上限</li><li>最小主義が基本</li><li>✅ツール固有</li></ul></div>
     </div>
-    <div class="secsub">できること一覧</div>
+    <div class="secsub">AGENTS.md に書ける項目</div>
     <div class="feat">
-      <div class="f"><div class="ic">①</div><b>機能A</b><span>ダミー</span></div><div class="f"><div class="ic">②</div><b>機能B</b><span>ダミー</span></div>
-      <div class="f"><div class="ic">③</div><b>機能C</b><span>ダミー</span></div><div class="f"><div class="ic">④</div><b>機能D</b><span>ダミー</span></div>
-      <div class="f"><div class="ic">⑤</div><b>機能E</b><span>ダミー</span></div><div class="f"><div class="ic">⑥</div><b>機能F</b><span>ダミー</span></div>
-      <div class="f"><div class="ic">⑦</div><b>機能G</b><span>ダミー</span></div><div class="f"><div class="ic">⑧</div><b>機能H</b><span>ダミー</span></div>
+      <div class="f"><div class="ic">概</div><b>概要</b><span>何のプロジェクトか</span></div><div class="f"><div class="ic">⚙</div><b>ビルド/テスト</b><span>具体コマンド</span></div>
+      <div class="f"><div class="ic">規</div><b>コード規約</b><span>命名・整形</span></div><div class="f"><div class="ic">試</div><b>テスト手順</b><span>通すチェック</span></div>
+      <div class="f"><div class="ic">安</div><b>セキュリティ</b><span>触らない範囲</span></div><div class="f"><div class="ic">📝</div><b>コミット作法</b><span>接頭辞など</span></div>
+      <div class="f"><div class="ic">PR</div><b>PRの作法</b><span>タイトル形式</span></div><div class="f"><div class="ic">💡</div><b>開発のヒント</b><span>環境tips</span></div>
     </div>
-    <p class="note" style="margin-top:10px;">※ 価格はすべてダミー。本番は公式の確定価格に差し替え</p>
+    <p class="note" style="margin-top:10px;">※ 公式サンプルの最小構成は「環境tips／テスト手順／PRの作法」✅</p>
   </section>
 
   <!-- 6 使い方 -->
   <section id="s6">
     <div class="sec-h"><div class="no">6</div><h2>使い方（初心者基準）</h2></div>
     <div class="flow">
-      <div class="step"><div class="t">① 登録</div><div class="d">無料で開始</div></div><div class="arrow">→</div>
-      <div class="step"><div class="t">② 話す</div><div class="d">やりたいことを</div></div><div class="arrow">→</div>
-      <div class="step"><div class="t">③ 受取</div><div class="d">成果物確認</div></div><div class="arrow">→</div>
-      <div class="step"><div class="t">④ 仕組み化</div><div class="d">繰り返しを任せる</div></div>
+      <div class="step"><div class="t">① 作成</div><div class="d">ルートに置く</div></div><div class="arrow">→</div>
+      <div class="step"><div class="t">② 書く</div><div class="d">手順・ルール</div></div><div class="arrow">→</div>
+      <div class="step"><div class="t">③ 頼む</div><div class="d">自動で読む</div></div><div class="arrow">→</div>
+      <div class="step"><div class="t">④ 育てる</div><div class="d">1行ずつ追記</div></div>
     </div>
-    <div class="secsub">こんな悩み → こう頼むだけ</div>
+    <div class="secsub">こんな悩み → AGENTS.md にこう書く</div>
     <ul class="map">
-      <li><span class="q">「資料を作るのが大変」</span><span class="ar">→</span><span class="a">「〇〇に △△ をお願い」（ダミー）</span></li>
-      <li><span class="q">「毎回の作業が面倒」</span><span class="ar">→</span><span class="a">「□□ を覚えさせて任せる」</span></li>
-      <li><span class="q">「何から始めれば？」</span><span class="ar">→</span><span class="a">まず「××」と話しかける</span></li>
+      <li><span class="q">「テストの動かし方を毎回間違える」</span><span class="ar">→</span><span class="a">「テストは npm test。push前に必ず通す」</span></li>
+      <li><span class="q">「余計なライブラリを足される」</span><span class="ar">→</span><span class="a">「新しい依存は追加しない」</span></li>
+      <li><span class="q">「触ってほしくない所をいじられる」</span><span class="ar">→</span><span class="a">「/legacy 配下は変更禁止」</span></li>
     </ul>
-    <div class="secsub">すぐ試せるプロンプト</div>
-    <div class="prompt"><span class="cm"># コピペで試せる例（ダミー）</span><br><span class="c">&gt;</span> 〇〇について、初心者向けに △△ を作って。□□ は×× で。</div>
+    <div class="secsub">そのまま使える“最小 AGENTS.md”</div>
+    <div class="prompt"><span class="cm"># AGENTS.md</span><br><span class="c">## テスト</span> — 実行: npm test ／ 変更前に必ず通す<br><span class="c">## コード規約</span> — 2スペース・camelCase ／ 依存は勝手に足さない<br><span class="c">## やらないこと</span> — /legacy は変更しない ／ .env はコミットしない</div>
     <div class="secsub">実践ステップ</div>
     <ul class="steps">
-      <li><span class="n">1</span>無料登録して、まず触ってみる（ダミー）</li>
-      <li><span class="n">2</span>小さなタスクを1つ頼んでみる</li>
-      <li><span class="n">3</span>うまくいったやり方を「型」として保存</li>
-      <li><span class="n">4</span>型を増やして作業をまるごと任せる</li>
+      <li><span class="n">1</span>ルート（README.md と同じ場所）に AGENTS.md を作成</li>
+      <li><span class="n">2</span>ビルド・テストの具体コマンドを書く</li>
+      <li><span class="n">3</span>禁止事項（触らない場所・依存追加なし）を書く</li>
+      <li><span class="n">4</span>AIがやらかした箇所だけ1行ずつ追記して育てる</li>
     </ul>
   </section>
 
-  <!-- 7 事例・活用例 -->
+  <!-- 7 Claude Code・活用 -->
   <section id="s7">
-    <div class="sec-h"><div class="no">7</div><h2>ユースケースと活用例</h2></div>
+    <div class="sec-h"><div class="no">7</div><h2>Claude Code でどう使うか・活用</h2></div>
+    <p class="body"><span class="hl">Claude Code は AGENTS.md を“そのまま”は読みません</span>（読むのは CLAUDE.md）。橋渡しが必要です。✅</p>
     <div class="cards">
-      <div class="c"><div class="pin">💼</div><h3>実務</h3><p>ダミー: こう使って、こう変わった。</p></div>
-      <div class="c"><div class="pin">⚙️</div><h3>業務改善</h3><p>ダミー: 定型業務を任せて時間を作る。</p></div>
-      <div class="c"><div class="pin">📣</div><h3>発信</h3><p>ダミー: 下書き→編集→発信を効率化。</p></div>
+      <div class="c"><div class="pin">@</div><h3>import（推奨）</h3><p>CLAUDE.md の中で <b>@AGENTS.md</b> を読み込む。</p></div>
+      <div class="c"><div class="pin">⛓</div><h3>symlink</h3><p><b>ln -s AGENTS.md CLAUDE.md</b> でリンク。</p></div>
+      <div class="c"><div class="pin">!</div><h3>非ネイティブ</h3><p>直接読む対応は未実装（要望 #34235）🔶</p></div>
     </div>
-    <div class="secsub">活用までの流れ</div>
+    <p class="note" style="margin-top:8px;">※ Cursor / Windsurf / Cline は AGENTS.md を直接読む。モノレポはパッケージ毎に入れ子で置け、近いファイルが優先（OpenAIリポは88個）✅🔶</p>
+    <div class="secsub">AGENTS.md の育て方</div>
     <div class="cycle">
-      <div class="node"><b>① 作る</b><span>成果物（ダミー）</span></div><span class="ar">→</span>
-      <div class="node"><b>② 届ける</b><span>発信・提供</span></div><span class="ar">→</span>
-      <div class="node"><b>③ 展開</b><span>応用・実践へ</span></div><span class="ar">↻</span>
-      <div class="node"><b>④ 再投資</b><span>仕組み強化</span></div>
+      <div class="node"><b>① 最小で置く</b><span>テスト/規約だけ</span></div><span class="ar">→</span>
+      <div class="node"><b>② 任せる</b><span>AIに作業を頼む</span></div><span class="ar">→</span>
+      <div class="node"><b>③ 見つける</b><span>やらかしを確認</span></div><span class="ar">↻</span>
+      <div class="node"><b>④ 1行足す</b><span>そこだけ追記</span></div>
     </div>
-    <p class="note" style="margin-top:10px;">⚠️ 具体的な数値は出典付きで明示（誇張しない）。出典が取れない数字は書かない</p>
-    <div class="secsub">もう一歩進んだ使い方</div>
-    <ul class="checks"><li>複数タスクを「型」にして連結（発展）</li><li>他ツールと組み合わせて自動化を広げる</li><li>チームで共有して仕組みにする</li></ul>
+    <div class="secsub">効く書き方のコツと“罠”</div>
+    <ul class="checks"><li>最小主義：コマンド・禁止事項・役割に絞る ✅🔶</li><li>実行可能な情報を優先（このコマンド／このチェック）✅</li><li>罠：書きすぎると AI が律儀すぎて柔軟性を失う ⚠️</li></ul>
   </section>
 
   <!-- 8 FAQ・注意 -->
   <section id="s8">
     <div class="sec-h"><div class="no">8</div><h2>FAQ・注意点</h2></div>
     <div class="faq">
-      <div class="qa"><div class="q">初心者でも使えますか？</div><div class="a">はい、専門知識は不要です（ダミー）</div></div>
-      <div class="qa"><div class="q">無料でどこまで？</div><div class="a">基本機能は無料で試せます（本番は確定情報）</div></div>
-      <div class="qa"><div class="q">本当に効果がありますか？</div><div class="a">使い方しだい。断定はできません（誇張・保証禁止）</div></div>
+      <div class="qa"><div class="q">必須の項目はある？</div><div class="a">いいえ。普通のMarkdownでOK、決まったフィールドはありません ✅</div></div>
+      <div class="qa"><div class="q">README.md は要らなくなる？</div><div class="a">いいえ。人間向けはREADME、AI向けはAGENTS.mdと役割が違います ✅</div></div>
+      <div class="qa"><div class="q">チャット指示とどっちが強い？</div><div class="a">人間の明示的な指示が最優先。AGENTS.mdは“常設のお願い” ✅</div></div>
     </div>
-    <div class="secsub">これからの流れ</div>
+    <div class="secsub">導入のロードマップ</div>
     <div class="timeline">
-      <div class="row"><span class="tbadge">今</span><div><b>まず触る</b><p>無料で試して感覚をつかむ（ダミー）</p></div></div>
-      <div class="row"><span class="tbadge">1週間</span><div><b>型を作る</b><p>うまくいったやり方を保存</p></div></div>
-      <div class="row"><span class="tbadge">1か月</span><div><b>仕組み化</b><p>繰り返しを任せて時間を作る</p></div></div>
+      <div class="row"><span class="tbadge">今</span><div><b>最小で置く</b><p>ルートに作成し、テスト/規約を書く</p></div></div>
+      <div class="row"><span class="tbadge">1週間</span><div><b>育てる</b><p>やらかした箇所だけ1行ずつ足す</p></div></div>
+      <div class="row"><span class="tbadge">1か月</span><div><b>入れ子化／連携</b><p>モノレポは入れ子、Claude Codeは@importで橋渡し</p></div></div>
     </div>
     <div class="secsub">読むときの注意（確度）</div>
     <div class="box"><h3>⚠️ この資料の読み方</h3>
-      <ul><li>✅公式確認済み ／ 🔶一次情報あり ／ ⚠️未確認・推測</li>
-      <li>数値・価格・成果はダミー。本番は出典が取れたものだけ断定で記載（誇張・断定保証は禁止）</li>
-      <li>仕様は変わるため、最終確認は公式サイトで</li></ul></div>
+      <ul><li>✅公式確認済み ／ 🔶一次情報あり（流動的） ／ ⚠️未確認・推測</li>
+      <li>採用数・スター数・対応ツールは変動する（公式の最新を正とする）</li>
+      <li>ガバナンス（Linux Foundation 配下）・Claude Code ネイティブ対応は要追跡 🔶</li>
+      <li>X由来の“感想”は個人差あり。誇張・断定保証はしない ⚠️</li></ul></div>
   </section>
 
   <footer>
     <div class="frow">
       <div class="lg"><svg width="132" height="30" style="color:#fff"><use href="#kawaru-logo"/></svg></div>
-      <a class="cta" href="#">チャンネル登録</a>
+      <a class="cta" href="https://github.com/fuuuuuuma/agents-md-guide-ja">GitHubで全文を読む →</a>
     </div>
-    <p class="src">出典（ダミー）：公式サイト <a href="#">example.com</a> ／ X <a href="#">x.com/...</a><br>
-      ※ 本資料は非公式まとめ。全文（GitHub公開）・スライドは概要欄から。</p>
+    <p class="src">出典：公式サイト <a href="https://agents.md/">agents.md</a> ／ 公式リポジトリ <a href="https://github.com/agentsmd/agents.md">github.com/agentsmd/agents.md</a><br>
+      ※ 本資料は非公式まとめ。全文（GitHub公開）・スライドは概要欄から。X由来の現場の声は⚠️個人差あり。</p>
   </footer>
 </div>
 </body>
